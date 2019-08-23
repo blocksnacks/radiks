@@ -185,7 +185,7 @@ export default class Model {
   }
 
   async decrypt() {
-    this.attrs = await decryptObject(this.attrs, this);
+    this.attrs = decryptObject(this.attrs, this);
     return this;
   }
 

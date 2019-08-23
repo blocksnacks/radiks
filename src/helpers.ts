@@ -27,8 +27,8 @@ const stringToValue = (value: string, clazz: any) => {
   return value;
 };
 
-export const decryptObject = async (encrypted: any, model: Model) => {
-  const privateKey = await model.encryptionPrivateKey();
+export const decryptObject = (encrypted: any, model: Model) => {
+  const privateKey = model.encryptionPrivateKey();
   const decrypted = {
     ...encrypted,
   };
